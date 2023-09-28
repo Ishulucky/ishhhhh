@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Policy</title>
+
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+      .card {
+            background-color: #f0f0f0;
+            border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        }
+    </style>
+</head>
+<body>
+     <div th:replace="footer :: footer"></div>
+
+    <div class="container mt-5">
+        <h1 class="mt-5  text-center">Policy Home Page</h1><br><br>
+        <div class="row">
+            <!-- Card for View Policies -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">View Policies</h5>
+                        <p class="card-text">View  policies.</p>
+                        <a th:href="@{/getpolicy}" class="btn btn-primary">Go to View Policies</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card for Create Policy -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Create Policy</h5>
+                        <p class="card-text">Create a new insurance policy.</p>
+                        <a th:href="@{/insertPolicyForm}" class="btn btn-primary">Go to Create Policy</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card for View Schedule -->
+  <div class="col-md-4">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">View Schedule</h5>
+            <p class="card-text">View insurance policy schedules.</p>
+            <a th:href="@{/getpolicySchedule}" class="btn btn-primary">View Schedule</a>
+            <a th:href="@{/ScheduleById}" class="btn btn-success">View Schedule by Id</a>
+        </div>
+    </div>
+</div>
+
+            <!-- Card for Policy Approval -->
+            <div class="col-md-4 mt-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Policy Approval</h5>
+                        <p class="card-text">Approve insurance policies.</p>
+                        <a th:href="@{/updatepolicy}" class="btn btn-primary">Go to Policy Approval</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card for Tracking -->
+            <div class="col-md-4 mt-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Tracking</h5>
+                        <p class="card-text">Track policy status and payments.</p>
+                        <a th:href="@{/StatusPaymentById}" class="btn btn-primary">Go to Tracking</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Add Bootstrap JS scripts (optional) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
